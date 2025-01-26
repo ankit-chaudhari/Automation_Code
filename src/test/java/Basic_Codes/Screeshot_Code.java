@@ -8,7 +8,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -25,11 +24,12 @@ public class Screeshot_Code {
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
     }
     @Test
-    public void Take_Screenshot() throws IOException {
+    public void Take_Screenshot() throws IOException, InterruptedException {
 
         WebElement textLogin = driver.findElement(By.xpath("//h5[text()='Login']"));
 
         if (textLogin.isDisplayed()) {
+            Thread.sleep(2000);
             // Cast WebDriver instance to TakesScreenshot interface
             // Take screenshot and store it as a File object
             File destFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
