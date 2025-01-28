@@ -20,6 +20,7 @@ public class AlertPopup_Code {
 
         Alerts();
         HandleFakeAlter();
+        CloseApplication();
 
     }
     public static void Alerts(){
@@ -36,13 +37,15 @@ public class AlertPopup_Code {
 
     }
     public static void HandleFakeAlter(){
-
         driver.findElement(By.xpath("//a[@id='fakealerttest']")).click();
         driver.findElement(By.xpath("//input[@id='fakealert']")).click();
         driver.findElement(By.xpath("//button[@class='dialog-button']")).click();
-
         System.out.println("Fake Alert Handle Successfully");
 
+    }
+    public static void CloseApplication(){
+        driver.quit();
+        System.out.println("Application Closed Successfully");
     }
 
 
