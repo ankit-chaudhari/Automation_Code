@@ -1,31 +1,29 @@
-package Basic_Codes;
+package Using_TestNg;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class Screeshot_Code {
+public class Screenshot_Code {
 
-    static WebDriver driver;
+    WebDriver driver;
 
-    public static void main (String[] args) throws IOException, InterruptedException {
-
-        initializedBrowser();
-        Take_Screenshot();
-        tearDown();
-    }
-    public static void initializedBrowser(){
+    @BeforeClass
+    public void initializedBrowser(){
         driver = new ChromeDriver();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-        System.out.println("Application Launched Successfully");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
-    public static void Take_Screenshot() throws IOException, InterruptedException {
+    @Test
+    public void Take_Screenshot() throws IOException, InterruptedException {
 
         WebElement textLogin = driver.findElement(By.xpath("//h5[text()='Login']"));
 
@@ -42,12 +40,16 @@ public class Screeshot_Code {
             FileHandler.copy(destFile, srcFile);
 
             System.out.println("Screenshot stored in file");
+
         }
     }
-    public static void tearDown(){
+    @AfterClass
+    public void tearDown(){
         if (driver != null){
             driver.quit();
             System.out.println("Application closed Successfully");
         }
     }
 }
+
+
