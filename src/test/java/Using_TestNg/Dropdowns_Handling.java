@@ -30,7 +30,6 @@ public class Dropdowns_Handling {
 
         driver.findElement(By.xpath("//a[text()='Drop-Down']")).click();
 
-
     }
     @Test
     public void TC01_SimpleDropdown() throws InterruptedException {
@@ -70,10 +69,10 @@ public class Dropdowns_Handling {
         System.out.println(optionsText);
 
     }
-    @AfterClass
-    public void tearDown(){
-        driver.quit();
-    }
+//    @AfterClass
+//    public void tearDown(){
+//        driver.quit();
+//    }
 
 
 }
