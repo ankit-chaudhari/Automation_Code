@@ -42,12 +42,14 @@ public class Buttons_Code {
        int yCoordinates = location.y;
         System.out.println("X -" + xCoordinates);
         System.out.println("Y -" + yCoordinates);
+        System.out.println("TC02_Passed");
     }
     @Test
     public void TC03_FindTheColorOfTheButton(){
 
         String color = driver.findElement(By.xpath("//button[@id='color']")).getCssValue("color");
         System.out.println("Color" +color);
+        System.out.println("TC03_Passed");
     }
     @Test
     public void TC04_FindTheHeightAndWidthofTheButton() {
@@ -57,6 +59,7 @@ public class Buttons_Code {
         int height = size.height;
         System.out.println("Width - " + width);
         System.out.println("Height - " + height);
+        System.out.println("TC04_Passed");
     }
     @Test
     public void TC05_ConfirmButtonisDisabled(){
@@ -71,6 +74,7 @@ public class Buttons_Code {
         else {
             System.out.println("Buttton is disabled");
         }
+        System.out.println("TC05_Passed");
 
     }
     @Test
