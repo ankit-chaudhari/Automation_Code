@@ -67,12 +67,50 @@ public class Dropdowns_Handling {
             optionsText.add(option.getText());         // Extract text
         }
         System.out.println(optionsText);
+        System.out.println("TC02_MultiSelectableDropdown");
 
     }
-//    @AfterClass
-//    public void tearDown(){
-//        driver.quit();
-//    }
+    @Test
+    public void TC03_SelectTheLastProgrammingLanguageAndPrintAllTheOptions(){
+
+        WebElement drop = driver.findElement(By.xpath("//select[@id='lang']"));
+
+        //Create Select Object
+        Select dropdown = new Select(drop);
+
+        //Get all options
+        List<WebElement> options = dropdown.getOptions();
+
+        // Convert dropdown options into list
+        for (WebElement option : options){
+            dropdown.selectByVisibleText(option.getText());
+
+        }
+        System.out.println("TC03_Pass");
+
+        // Example: Verify that all options are selected
+        List<WebElement> selectedOptions = dropdown.getAllSelectedOptions();
+        System.out.println("Selected options: ");
+        for (WebElement selectedOption : selectedOptions) {
+            System.out.println(selectedOption.getText());
+        }
+
+    }
+    @Test
+    public void TC04_SelectIndiausingvalueandprinttheselectedvalue(){
+
+        WebElement drop = driver.findElement(By.xpath("//select[@id='country']"));
+
+        Select dp = new Select(drop);
+        dp.selectByIndex(6);
+        String ele = dp.getFirstSelectedOption().getText();
+        System.out.println(ele);
+        System.out.println("TC04_Pass");
+    }
+    @AfterClass
+    public void tearDown(){
+        driver.quit();
+    }
 
 
 }
