@@ -1,6 +1,7 @@
 package Using_TestNg;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -67,12 +68,35 @@ public class Dropdowns_Handling {
             optionsText.add(option.getText());         // Extract text
         }
         System.out.println(optionsText);
+    }
+    @Test
+    public void TC03_SelectTheLastProgrammingLanguageAndPrintAllTheOptions(){
+
+        WebElement ele = driver.findElement(By.xpath("//select[@id='lang']"));
+        Select s = new Select(ele);
+        s.selectByIndex(4);
+
+        List<WebElement> OptiosText = s.getOptions();
+        for (WebElement option : OptiosText){
+            System.out.println(option.getText());
+        }
+    }
+    @Test
+    public void TC04_SelectIndiaUsingValueAndPrintTheSelectedValue(){
+
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+            js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+
+        WebElement ele = driver.findElement(By.xpath("country"));
+        Select s = new Select(ele);
+        s.selectByValue("India");
 
     }
-//    @AfterClass
-//    public void tearDown(){
-//        driver.quit();
-//    }
+    @AfterClass
+    public void tearDown(){
+        driver.quit();
+        System.out.println("Application Closed Successfully");
+    }
 
 
 }
