@@ -65,10 +65,6 @@ public class AlertPopup_Code {
        // driver.switchTo().alert().dismiss();
 
 
-
-
-
-
         driver.findElement(By.xpath("(//input[@class='styled-click-button'])[3]")).click();
         String testData = "Test Value";
         driver.switchTo().alert().sendKeys(testData);
