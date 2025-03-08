@@ -36,7 +36,7 @@ public class Screeshot_Code {
             File destFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
             // Define destination for the screenshot
-            File srcFile = new File("D://New folder//Failed TC" +"_" + System.currentTimeMillis() + ".png");
+           File srcFile = new File("D://New folder//Failed TC" +"_" + System.currentTimeMillis() + ".png");
 
             //Copy the screeshot from desired location to expected
             FileHandler.copy(destFile, srcFile);
