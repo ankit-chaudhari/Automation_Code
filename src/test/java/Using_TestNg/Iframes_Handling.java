@@ -17,9 +17,11 @@ public class Iframes_Handling {
     @BeforeClass
     public void initializedBrowser(){
         driver = new ChromeDriver();
-        driver.get("https://testpages.eviltester.com/styled/index.html");
+        driver.get("https://demo.automationtesting.in/Index.html");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+
     }
     @Test
     public void TC_IframeHandling(){

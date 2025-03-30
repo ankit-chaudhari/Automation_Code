@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<suite name="MyTestSuite">
-    <test name="Test1">
-        <classes>
-            <class name="AlertPopup_Code" />
-        </classes>
-    </test>
-</suite>
