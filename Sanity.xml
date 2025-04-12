@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/A1/IdeaProjects/Basic_Automation_Codes/src/test/java/Basic_Codes">
+
+        <groups>
+            <run>
+                <include name="Smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Using_TestNg.GroupOfTestSuites"/>
+            <class name="Using_TestNg.GroupOfTestSuites2"/>
+        </classes>
+    </test>
+</suite>

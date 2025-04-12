@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+     <suite name="All Test Suite">
+          <test verbose="2" preserve-order="true" name="C:/Users/A1/IdeaProjects/Basic_Automation_Codes/src/test/java/Using_TestNg">
+              <classes>
+                  <class name="Using_TestNg.AlertPopup_Code">
+
+                 <class name="Using_TestNg.GroupOfTestSuites">
+
+                 </class>
+                 <class name="Using_TestNg.GroupOfTestSuites2">
+                     <methods>
+                         <include name="TestCase_07"/>
+                     </methods>
+                 </class>
+                 <class name="Using_TestNg.Handle_Cookies">
+                     <methods>
+                         <include name="TC01_HandleCookiesOnThisPage"/>
+                     </methods>
+                 </class>
+                 <class name="Using_TestNg.Iframes_Handling">
+                     <methods>
+                         <include name="TC_IframeHandling"/>
+                     </methods>
+                 </class>
+                 <class name="Using_TestNg.Multiselectable_WebElements">
+                     <methods>
+                         <include name="TC01_SelectAllElementsWithUsingActions"/>
+                     </methods>
+                 </class>
+                 <class name="Using_TestNg.Refresh_Page">
+                     <methods>
+                       <include name="TC_RefreshTheAndValidateData"/>
+                     </methods>5             </class>
+                <class name="Using_TestNg.Screenshot_Code">
+                     <methods>
+                         <include name="Take_Screenshot"/>
+                     </methods>
+                 </class>
+                 <class name="Using_TestNg.WindowHandles">
+                     <methods>
+                         <include name="WindowHandle"/>
+                     </methods>
+                 </class>
+             </classes>
+         </test>
+     </suite>

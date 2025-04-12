@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/A1/IdeaProjects/Basic_Automation_Codes/src/test/java/Using_TestNg/AlertPopup_Code.java"><classes><class name="Using_TestNg.AlertPopup_Code"><methods><include name="TC01_ValidateAlertPopup"/><include name="TC02_ValidateHandleFakeAlter"/><include name="TC03_HandleAltersFromJavaScript"/></methods></class></classes></test></suite>
